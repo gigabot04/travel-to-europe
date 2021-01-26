@@ -1975,10 +1975,6 @@ template {
     color: #fe7865;
     top: -8px;
     left: -11px; }
-  @media (max-width: 767px) {
-    .pay-modal__label {
-      top: 184px;
-      left: 55px; } }
 
 .pay-modal__control {
   background-color: #ffffff;
