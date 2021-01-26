@@ -1,0 +1,215 @@
+.question {
+  background-image: url("../img/background-question-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 36.5%;
+  min-height: 455px;
+  margin-top: 136px;
+
+  & .wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 454px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-question-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-size: cover;
+    margin-top: 94px;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: none;
+    margin-top: 44px;
+    min-height: 441px;
+  }
+}
+
+.question__container {
+  width: 656px;
+  min-height: 315px;
+  background-color: $basic-white;
+  box-shadow: 0 4px 30px rgba($lite-dark, 0.1);
+  border-radius: 5px;
+  padding: 50px;
+  padding-left: 45px;
+  padding-right: 43px;
+  padding-bottom: 48px;
+  margin-right: 0;
+  margin-left: auto;
+  padding-top: 50px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 320px;
+    background-color: $light;
+    box-shadow: none;
+    padding: 50px 16px;
+  }
+}
+
+.question__text {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  color: $basic-dark;
+  text-align: center;
+  margin: 0;
+  margin-left: 11px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.question__desc {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #141517;
+  text-align: center;
+  margin: 0;
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-bottom: 23px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 12px;
+    margin-left: 0;
+    margin-bottom: 23px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 20px 0;
+  }
+}
+
+.question__form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 4px;
+    padding-right: 5px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+}
+
+.question__label {
+  position: absolute;
+  top: 17px;
+  left: 26px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: $basic-dark;
+
+  &::after {
+    content: "*";
+    position: absolute;
+    color: $orange;
+    top: -8px;
+    left: -11px;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 27px;
+  }
+}
+
+.question__control {
+  background-color: $basic-white;
+  border: 1px solid rgba($lite-dark, 0.3);
+  padding: 16px 15px 15px 51px;
+  width: 269px;
+  min-height: 50px;
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+    margin-bottom: 20px;
+  }
+}
+
+.question__control-wrap {
+  position: relative;
+
+  &--active {
+    &::before {
+      content: "Данные не верны";
+      position: absolute;
+      top: -19px;
+      left: 0;
+      color: $orange;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    & .question__control {
+      border: 1px solid $orange;
+    }
+  }
+
+
+  &:nth-child(2) .question__control {
+    padding: 16px 15px 15px 14px;
+  }
+}
+
+.question__btn {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $basic-white;
+  padding: 18px 39px 17px 40px;
+  margin-top: 24px;
+  background-color: $orange;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-btn;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 19px 84px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 19px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 0;
+    padding: 19px 103px;
+  }
+}
+
+.question__control::-webkit-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: $basic-dark;
+}
+
+.question__control:-moz-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: $basic-dark;
+}
